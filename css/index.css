@@ -1,0 +1,82 @@
+body {
+    background-image: url('../assets/irmaodojorel.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 37%;
+    height: 59%;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #000000;
+    border-radius: 77px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.title {
+    position: relative;
+    align-self: center;
+    font-family: monospace;
+    font-size: 50px;
+    color: #fffaf0;
+    bottom: 35%;
+    text-shadow: 0px 0px 10px cyan, 
+                0px 0px 20px cyan, 
+                0px 0px 40px cyan, 
+                0px 0px 80px cyan;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+a.option {
+    display: block;
+    width: 97%;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2), inset 0 -2px 5px rgba(255, 255, 255, 0.1);
+    margin-bottom: 15px;
+}
+
+a.option:hover {
+    background: linear-gradient(90deg, #2575fc, #6a11cb);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+}
+
+a.option:active {
+    transform: translateY(2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 -1px 3px rgba(255, 255, 255, 0.1);
+}
+
+
+a.option:last-child {
+    margin-bottom: 0;
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
