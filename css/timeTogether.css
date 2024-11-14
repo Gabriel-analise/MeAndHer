@@ -6,6 +6,8 @@ body, html {
 }
 
 body {
+    background-repeat: no-repeat;
+    background-size: cover;
     background: linear-gradient(145deg, #1a2a6c, #b21f1f, #fdbb2d);
     color: #ffffff;
     display: flex;

@@ -2,6 +2,8 @@ body {
     background-image: url('../assets/irmaodojorel.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     margin: 0;
 }
 
@@ -42,7 +44,7 @@ body {
 
 a.option {
     display: block;
-    width: 97%;
+    width: 93%;
     padding: 15px 20px;
     font-size: 18px;
     font-weight: bold;
@@ -79,7 +81,7 @@ img {
     object-fit: fill;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1114px) {
     .content {
         width: 90%;
         height: auto;
