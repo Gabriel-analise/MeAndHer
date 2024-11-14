@@ -69,14 +69,56 @@ a.option:active {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 -1px 3px rgba(255, 255, 255, 0.1);
 }
 
-
 a.option:last-child {
     margin-bottom: 0;
 }
-
 
 img {
     width: 100%;
     height: 100%;
     object-fit: fill;
+}
+
+@media (max-width: 768px) {
+    .content {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+        bottom: 0;
+        margin-bottom: 10px;
+    }
+
+    a.option {
+        font-size: 16px;
+        padding: 10px 15px;
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 22px;
+        text-shadow: 0px 0px 5px cyan;
+    }
+
+    a.option {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .content {
+        padding: 10px;
+        border-radius: 15px;
+    }
 }

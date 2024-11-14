@@ -17,10 +17,10 @@ body {
 }
 
 #timeCounter {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
-    margin-bottom: 30px;
-    padding: 20px 30px;
+    margin-bottom: 20px;
+    padding: 15px 25px;
     background: rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 12px;
@@ -32,8 +32,8 @@ body {
 
 a.option {
     display: inline-block;
-    padding: 12px 30px;
-    font-size: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
     color: #ffffff;
@@ -52,4 +52,29 @@ a.option:hover {
 a.option:active {
     transform: translateY(1px);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    #timeCounter {
+        font-size: 30px;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+    }
+
+    a.option {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #timeCounter {
+        font-size: 24px;
+        padding: 8px 15px;
+    }
+
+    a.option {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 }
