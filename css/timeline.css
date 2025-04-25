@@ -86,21 +86,24 @@ body {
 
 @media (max-width: 768px) {
   .preview {
-    width: 140px;
-    height: 84px;
+    width: 120px;
+    height: 150px;
   }
   .caption {
-    bottom: calc(100% + 94px);
+    bottom: calc(100% + 160px);
+    font-size: 10px;
+    left: 90%;
   }
 }
 @media (max-width: 480px) {
   .preview {
     width: 120px;
-    height: 72px;
+    height: 150px;
   }
   .caption {
-    bottom: calc(100% + 82px);
+    bottom: calc(100% + 160px);
     font-size: 10px;
+    left: 165%;
   }
 }
 
