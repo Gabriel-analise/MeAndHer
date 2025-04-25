@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(45deg, #706fd3, #d96fd3);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.spotify-player {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+iframe {
+  width: 100%;
+  height: 352px;
+  border: none;
+  border-radius: 12px;
+}
+
+.voltar {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.voltar:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}

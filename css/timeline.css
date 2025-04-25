@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+body {
+  background: linear-gradient(to bottom, #706fd3, #d96fd3);
+  min-height: 100vh;
+  padding: 50px 20px;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #ffbddf;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.2);
+}
+
+.timeline-container {
+  position: relative;
+  width: 80%;
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  margin: 220px auto 80px;
+}
+
+.event {
+  position: absolute;
+  top: 0;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  background: #ff69b4;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: pulse 2s infinite alternate ease-in-out;
+}
+@keyframes pulse {
+  from { box-shadow: 0 0 0px rgba(255,105,180,0.4); }
+  to   { box-shadow: 0 0 20px rgba(255,105,180,0.8); }
+}
+
+.preview {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 195px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.caption {
+  position: absolute;
+  bottom: calc(100% + -48px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.event:hover .preview,
+.event:hover .caption {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .preview {
+    width: 140px;
+    height: 84px;
+  }
+  .caption {
+    bottom: calc(100% + 94px);
+  }
+}
+@media (max-width: 480px) {
+  .preview {
+    width: 120px;
+    height: 72px;
+  }
+  .caption {
+    bottom: calc(100% + 82px);
+    font-size: 10px;
+  }
+}
+
+.voltar {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #ffffff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.voltar:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}

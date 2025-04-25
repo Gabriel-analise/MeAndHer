@@ -1,30 +1,20 @@
 function startLiveCounter() {
-    const element = document.getElementById('timeCounter');
+  const el = document.getElementById('timeCounter');
+  if (!el) return console.error('timeCounter not found');
 
-    if(!element) {
-        console.error('lement timeCounter not found');
-    }
-
-    setInterval(() => {
-        const elapsed = calculateTimeTogetherSince();
-        element.innerText = `Estamos há: ${elapsed.days} dias, ${elapsed.hours} horas, ${elapsed.minutes} minutos e ${elapsed.seconds} segundos juntos`;
-    }, 1000);
-
-}
-
-
-function calculateTimeTogetherSince() {
+  setInterval(() => {
     const now = new Date();
-    const start = new Date('2019-02-07');
-    const diference = now - start;
+    const start = new Date('2019-02-08');
+    const diff = now - start;
 
-    const days = Math.floor(diference / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diference / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diference / (1000 * 60)) % 60);
-    const seconds = Math.floor((diference / 1000) % 60)
-    
-    return {days, hours, minutes, seconds};
+    const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours   = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
 
+    el.innerText = `Desde aquele 8 de fevereiro mágico já se passaram `
+      + `${days} dias, ${hours} horas, ${minutes} minutos e ${seconds} segundos de nós 💞`;
+  }, 1000);
 }
 
 startLiveCounter();
